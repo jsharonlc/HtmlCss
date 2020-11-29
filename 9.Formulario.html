@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fromularios</title>
+  </head>
+  <body>
+    <!--El accion es el que recibe los datos
+    Method establecer el método ya sea GET o POST -->
+    <form action="recibe.php" method="">
+      <!--
+            Maxlength para determinar el máximo de palabras
+            Size: el tamaño de la caja del input
+            Required que la linea si o si es requerida, se tiene  que hacer validación
+            de js para que lo coteje y funcione bien
+            readonly: solo es para leer la información dentro
+            diable: para descativar por que esta deshabilitado
+        -->
+      <input
+        type="text"
+        placeholder="Nombre"
+        maxlength="20"
+        size="50"
+        required
+        name="nombre"
+      />
+      <br />
+      <input type="email" placeholder="E-mail" name="email" />
+      <br />
+      <!--El cols y el rows nos permiten utilizar el ancho y el alto-->
+      <textarea
+        name=""
+        id=""
+        cols="30"
+        rows="10"
+        placeholder="Mensaje"
+      ></textarea>
+      <br />
+
+      <!--El select nos deja escoger entre muchas opciones una
+    El for del label esta enlazado al pais-->
+      <label for="pais">País:</label>
+      <select name="pais" id="pais">
+        <option value="españa">España</option>
+        <option value="mexico">México</option>
+        <option value="bolivia">Bolivia</option>
+      </select>
+
+      <!--Input de tipo radio-->
+      <input type="radio" name="genero" value="hombre" id="hombre" />
+      <label for="hombre">Hombre</label>
+      <input type="radio" name="genero" value="mujer" id="mujer" />
+      <label for="mujer">Mujer</label>
+      <br />
+
+      <input type="checkbox" name="terminos" id="terminos" />
+      <label for="terminos">Terminos y Condiciones</label>
+      <button type="submit" value="Enviar">Enviar</button>
+    </form>
+  </body>
+</html>
